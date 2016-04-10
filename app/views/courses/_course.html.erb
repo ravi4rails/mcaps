@@ -1,0 +1,7 @@
+<tr id="course_<%= course.id%>">
+  <td><%= course.name %></td>
+  <td><%= course.stream %></td>
+  <td><%= link_to 'Show', course %></td>
+  <td><%= link_to 'Edit', edit_course_path(course), :remote => true %></td>
+  <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %></td>
+</tr>

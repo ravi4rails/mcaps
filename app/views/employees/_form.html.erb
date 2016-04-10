@@ -1,0 +1,88 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <div class="jumbotron">
+        <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+        <ul>
+        <% @employee.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :middle_name %>
+      <%= f.text_field :middle_name, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :date_of_birth %>
+      <%= f.text_field :date_of_birth, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :date_of_joining %>
+      <%= f.text_field :date_of_joining, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :qualification %>
+      <%= f.text_field :qualification, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :contact %>
+      <%= f.text_field :contact, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :gender %>
+      <%= f.text_field :gender, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :gender %>
+      <%= f.text_field :gender, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :employee_department_id %>
+      <%= f.number_field :employee_department_id, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :employee_grade_id %>
+      <%= f.number_field :employee_grade_id, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :age %>
+      <%= f.number_field :age, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :profile_picture %>
+      <%= f.file_field :profile_picture, class: "form-control" %>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <%= f.label :address %>
+      <%= f.text_area :address, class: "form-control" %>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to 'Back', employees_path, class: "btn btn-primary" %>
+  </div>
+<% end %>

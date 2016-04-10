@@ -1,0 +1,22 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Name:</strong>
+    <%= @course.name %>
+  </p>
+  <p>
+    <strong>Stream:</strong>
+    <%= @course.stream %>
+  </p>
+  <%= link_to 'Edit', edit_course_path(@course), :remote => true %> |
+  <%= link_to 'Back', courses_path %>
+  <div id="course-subject-list">
+    <%= render "course_subject_list", course: @course %>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#include-subjects">
+    Include Subjects
+  </button>
+  <div class="modal fade" id="include-subjects" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <%= render "include_subjects"%>
+  </div>
+</div>

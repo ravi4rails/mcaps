@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <% if course.subjects.present? %>
+    <h3>Subject List</h3>
+    <% course.subjects.each do |course_subject| %>
+      <div class="course-subject">
+        <h5>
+          <%= course_subject.name %>
+        </h5>
+      </div>
+    <% end %>
+  <% else %>
+  <h3 class="text-center">Include Subject in this course.</h3>
+  <% end %>
+</div>
