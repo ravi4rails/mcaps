@@ -1,3 +1,6 @@
 #error_explanation li, h2{
   color:red;
 }
+.profile-picture {
+  width:100% !important;
+}

@@ -3,7 +3,7 @@ class Student < ActiveRecord::Base
   BLOOD_GROUP = ["A", "B", "B+", "O+", "A-"]
   RELEGION = ["Hindu", "Muslim", "Chrestian", "Sikh"]
   CATEGORY = ["General", "Obc", "St", "Sc"]
-
+  mount_uploader :profile_picture, AvatarUploader
   def full_name
     "#{first_name} #{middle_name} #{last_name}"
   end

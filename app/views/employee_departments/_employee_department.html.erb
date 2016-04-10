@@ -1,0 +1,7 @@
+<tr id="employee_department_<%= employee_department.id%>">
+  <td><%= employee_department.name %></td>
+  <td><%= employee_department.code %></td>
+  <td><%= link_to 'Show', employee_department %></td>
+  <td><%= link_to 'Edit', edit_employee_department_path(employee_department), :remote => true %></td>
+  <td><%= link_to 'Destroy', employee_department, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %></td>
+</tr>

@@ -1,59 +1,52 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @student.first_name %>
-</p>
-
-<p>
-  <strong>Middle name:</strong>
-  <%= @student.middle_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @student.last_name %>
-</p>
-
-<p>
-  <strong>Date of birth:</strong>
-  <%= @student.date_of_birth %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @student.age %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @student.address %>
-</p>
-
-<p>
-  <strong>Contact:</strong>
-  <%= @student.contact %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @student.country %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @student.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @student.state %>
-</p>
-
-<p>
-  <strong>Course:</strong>
-  <%= @student.course_id %>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <div class="">
+        <%= image_tag @student.profile_picture_url, class: "profile-picture img-responsive" %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="well">
+        <p>
+          <strong>Name:</strong>
+          <%= @student.full_name %>
+        </p>
+        <p>
+          <strong>Date of birth:</strong>
+          <%= @student.date_of_birth %>
+        </p>
+        <p>
+          <strong>Age:</strong>
+          <%= @student.age %>
+        </p>
+        <p>
+          <strong>Address:</strong>
+          <%= @student.address %>
+        </p>
+        <p>
+          <strong>Contact:</strong>
+          <%= @student.contact %>
+        </p>
+        <p>
+          <strong>Country:</strong>
+          <%= @student.country %>
+        </p>
+        <p>
+          <strong>City:</strong>
+          <%= @student.city %>
+        </p>
+        <p>
+          <strong>State:</strong>
+          <%= @student.state %>
+        </p>
+        <p>
+          <strong>Course:</strong>
+          <%= @student.course_id %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <%= link_to 'Edit', edit_student_path(@student) %> |
+  <%= link_to 'Back', students_path %>
+</div>

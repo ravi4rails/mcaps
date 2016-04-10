@@ -28,11 +28,11 @@
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <%= f.label :date_of_birth %>
-      <%= f.text_field :date_of_birth, class: "form-control" %>
+      <%= f.text_field :date_of_birth, class: "form-control datepicker" %>
     </div>
     <div class="col-xs-12 col-md-4">
       <%= f.label :date_of_joining %>
-      <%= f.text_field :date_of_joining, class: "form-control" %>
+      <%= f.text_field :date_of_joining, class: "form-control datepicker" %>
     </div>
     <div class="col-xs-12 col-md-4">
       <%= f.label :qualification %>
@@ -86,3 +86,9 @@
     <%= link_to 'Back', employees_path, class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(".datepicker").datepicker({
+    format: "yyyy-mm-dd"
+  });
+</script>
