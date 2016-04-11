@@ -70,7 +70,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-4">
       <%= f.label :course_id %>
-      <%= f.number_field :course_id, class: "form-control" %>
+      <%= f.select :course_id, options_for_select(Course.all.collect {|p| [ p.name, p.id ] },(f.object.try(:course_id))),{include_blank: 'Select Course'}, { :class => ' form-control'} %>
     </div>
     <div class="col-xs-12 col-md-4">
       <%= f.label :email %>

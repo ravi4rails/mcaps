@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :courses do
     collection do
       post :include_subjects
+      get :delete_subject
     end
   end
   resources :employees

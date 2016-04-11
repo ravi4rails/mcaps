@@ -62,13 +62,17 @@ class CoursesController < ApplicationController
     end
   end
 
+  def delete_subject
+    @course_subject = CourseSubject.find(params[:course_params_id])
+    @course_subject.destroy
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_course
       @course = Course.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
       params.require(:course).permit(:name, :stream)
     end
