@@ -4,3 +4,24 @@
 .profile-picture {
   width:100% !important;
 }
+
+.thumb {
+  margin-bottom: 30px;
+}
+.caption-link {
+  background:rgba(0, 0, 1, 0.5) none repeat scroll 0 0;
+  margin-bottom: -3px;
+  margin-top: 20px;
+  margin-left: -5px;
+  margin-right: -5px;
+  height:50px;
+}
+
+.thumb a {
+  text-decoration: none;
+}
+
+.caption-link h3 {
+  padding-top:12px;
+  color:#fff;
+}

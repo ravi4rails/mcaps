@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :employees
   resources :students
   get 'home/index'
+  get '/dashboard' => 'home#dashboard'
   root "home#index"
 end
