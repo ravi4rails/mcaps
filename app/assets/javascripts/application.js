@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery-ui
+//= require moment.min
+//= require fullcalendar
 //= require custom

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :events do
+    collection do
+      get :event_calendar
+      get :calendar_events
+    end
+  end
   resources :employee_departments
   resources :subjects
   resources :courses do

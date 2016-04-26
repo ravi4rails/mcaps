@@ -15,5 +15,6 @@
  *= require bootstrap
  *= require jquery-ui
  *= require font-awesome
+ *= require fullcalendar
  *= require custom
  */

@@ -3,11 +3,11 @@
     <h3>Subject List</h3>
     <table>
       <tbody>
-        <% course.subjects.each do |course_subject| %>
+        <% course.course_subjects.each do |course_subject| %>
           <tr id="course_subject_<%= course_subject.id%>">
             <td>
               <h5>
-                <%= course_subject.name %>
+                <%= course_subject.subject.try(:name) %>
               </h5>
             </td>
             <td>
